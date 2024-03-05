@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Daftar Karyawan'),
       ),
       body: FutureBuilder<List<Karyawan>>(
-        future: _readJsonData(), 
+        future: _readJsonData(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
@@ -48,15 +48,14 @@ class MyHomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(snapshot.data![index].nama,
-                              style: const TextStyle(fontWeight: FontWeight.bold)
-                  ),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Umur: ${snapshot.data![index].umur} tahun'),
-                      Text('Alamat: ${snapshot.data![index].alamat.jalan}, ' 
-                                  '${snapshot.data![index].alamat.kota}, '
-                                  '${snapshot.data![index].alamat.provinsi}'),
+                      Text('Alamat: ${snapshot.data![index].alamat.jalan}, '
+                          '${snapshot.data![index].alamat.kota}, '
+                          '${snapshot.data![index].alamat.provinsi}'),
                     ],
                   ),
                 );
