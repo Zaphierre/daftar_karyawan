@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilem_1/models/movie.dart';
 import 'package:pilem_1/services/api_service.dart';
 import 'detail_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
